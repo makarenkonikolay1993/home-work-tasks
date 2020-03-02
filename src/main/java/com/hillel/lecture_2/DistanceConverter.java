@@ -24,14 +24,14 @@ public class DistanceConverter {
     @Step
     public double milesToKilometres(double miles) {
 //        TODO implements result
-        double result = 0.0;
+        double result = miles*1.609;
         return result;
     }
 
     @Step
     public double kilometresToMiles(double kilometres) {
 //        TODO implements result
-        double result = 0.0;
+        double result = kilometres/1.609;
         return result;
     }
 }
