@@ -7,17 +7,18 @@ import io.qameta.allure.Step;
  */
 public class SpeedConverter {
 
+
     @Step
     public double speedKmToMi(double speedKm) {
 //        TODO implements result
-        double result = 0.0;
+        double result = speedKm/1.609;
         return result;
     }
 
     @Step
     public double speedMiToKm(double speedMi) {
 //        TODO implements result
-        double result = 0.0;
+        double result = speedMi*1.609;
         return result;
     }
 

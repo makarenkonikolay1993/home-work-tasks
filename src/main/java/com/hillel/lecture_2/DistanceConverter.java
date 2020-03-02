@@ -10,14 +10,14 @@ public class DistanceConverter {
     @Step
     public double metersToInches(double meters) {
 //        TODO implements result
-        double result = 0.0;
+        double result = meters*39.37;
         return result;
     }
 
     @Step
     public double inchesToMeters(double inches) {
 //        TODO implements result
-        double result = 0.0;
+        double result = inches/39.37;
         return result;
     }
 
