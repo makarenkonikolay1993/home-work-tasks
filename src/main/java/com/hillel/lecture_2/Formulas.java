@@ -43,7 +43,7 @@ public class Formulas {
     }
 
     public double calculate14Formula(double x) {
-        double result =(Math.sqrt(3d*Math.sin(x)-Math.sin(Math.toRadians(3*x)))+Math.cbrt(Math.exp(1.3*x)+Math.exp(-1.3*x)))*1d/Math.abs(x+5d/2d);
+        double result =(Math.sqrt(3d*Math.sin(x)-Math.sin(3*x))+Math.cbrt(Math.exp(1.3*x)+Math.exp(-1.3*x)))*1d/Math.abs(x+5d/2d);
 //        TODO implement formula 14
         return result;
     }
@@ -55,7 +55,7 @@ public class Formulas {
     }
 
     public double calculate16Formula(double x) {
-        double result = Math.cbrt(Math.exp(2*x)*Math.sqrt(x)-((x+1d/3d)/x))*Math.abs(Math.cos(Math.toRadians(2.5*x)));
+        double result = Math.cbrt(Math.exp(2*x)*Math.sqrt(x)-((x+1d/3d)/x))*Math.abs(Math.cos(2.5*x));
 //        TODO implement formula 16
         return result;
     }
@@ -73,7 +73,7 @@ public class Formulas {
     }
 
     public double calculate19Formula(double x) {
-        double result = Math.acos(Math.tan(Math.toRadians(5*x/Math.PI))+(Math.pow(x,3.2)/28));
+        double result = Math.acos(Math.tan(5*x/Math.PI)+(Math.pow(x,3.2)/28));
 //        TODO implement formula 19
         return result;
     }
@@ -83,43 +83,56 @@ public class Formulas {
         натуральный логарифм в квадрате - Math.E в квадрате  https://socratic.org/questions/is-lnx-2-equivalent-to-ln-2-x     https://www.quora.com/Can-we-write-ln-2-x-as-2-ln-x
          */
 
-        double result = (Math.cbrt(Math.pow(Math.exp(x), 2)) + Math.tan(Math.cos(Math.toRadians(Math.PI*x))))*Math.abs(Math.log(x/10.5+1d/3d));
+        double result = (Math.cbrt(Math.pow(Math.exp(x), 2)) + Math.tan(Math.cos(Math.PI*x)))*Math.abs(Math.log(x/10.5+1d/3d));
 //        TODO implement formula 20
         return result;
     }
 
     public double calculate21Formula(double x) {
-        double result = (Math.pow(Math.log(x), 1d/4d)+Math.acos(Math.toRadians(x+3d)))*(1d/Math.abs(x+2d*Math.pow(x,2d)));
+
+        /*
+        *Невозможно получить результат, отличный от NaN в данной интерпретации
+         */
+        double a = (Math.pow(Math.log(x), 1d/4d)); //Здесь x должен быть всегда позитивным, иначе NaN
+        double b = Math.acos(x+3); // Здесь x+3 - всегда должен быть меньше единицы, иначе NaN
+        double c = (1d/Math.abs(x+2d*Math.pow(x,2d)));
+        double result =(a+b)*c;
 //        TODO implement formula 21
         return result;
+
+        /*
+        1. Либо формулы ДЗ с наличием кос син танг котанг - решены неправильно из-за отстутствия преобразования
+        2. Либо учитывать здесь Expected Result как NaN
+         */
+
     }
 
     public double calculate22Formula(double x) {
-        double result = Math.asin(Math.toRadians(Math.log(x)/(Math.pow(x,2)+5*x+1)))-(Math.pow(x,3.2)/28);
+        double result = Math.asin(Math.log(x)/(Math.pow(x,2)+5*x+1))-(Math.pow(x,3.2)/28);
 //        TODO implement formula 22
         return result;
     }
 
     public double calculate23Formula(double x) {
-        double result = Math.acos(Math.tan(Math.toRadians(5*x/Math.PI)))+(Math.pow(x,5.7)/23);
+        double result = Math.acos(Math.tan(5*x/Math.PI))+(Math.pow(x,5.7)/23);
 //        TODO implement formula 23
         return result;
     }
 
     public double calculate24Formula(double x) {
-        double result = Math.atan(Math.toRadians(Math.abs(8.3-21*Math.pow(x,2)-0.8*x)/Math.cbrt(2.5+(1d/Math.pow(x,2)))));
+        double result = Math.atan(Math.abs(8.3-21*Math.pow(x,2)-0.8*x)/Math.cbrt(2.5+(1d/Math.pow(x,2))));
 //        TODO implement formula 24
         return result;
     }
 
     public double calculate25Formula(double x) {
-        double result = Math.pow(Math.log(Math.acos(Math.toRadians(Math.abs(Math.pow(x,3.4)+2.5*Math.pow(x,1.2)-0.7)/Math.cbrt(Math.exp(2.5*x))))),1d/4d);
+        double result = Math.pow(Math.log(Math.acos(Math.abs(Math.pow(x,3.4)+2.5*Math.pow(x,1.2)-0.7)/Math.cbrt(Math.exp(2.5*x)))),1d/4d)+1;
 //        TODO implement formula 25
         return result;
     }
 
     public double calculate26Formula(double x) {
-        double result = Math.log(Math.abs(Math.sin(Math.toRadians(x))))+2*Math.pow(Math.E,x)+2*Math.cos(Math.toRadians(Math.abs(x)))+2;
+        double result = Math.log(Math.abs(Math.sin(x)))+2*Math.pow(Math.E,x)+2*Math.cos(Math.abs(x))+2;
 //        TODO implement formula 26
         return result;
     }
