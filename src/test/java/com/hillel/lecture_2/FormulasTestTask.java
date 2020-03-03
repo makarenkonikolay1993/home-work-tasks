@@ -46,4 +46,97 @@ public class FormulasTestTask {
         assertEquals(formulas.calculate13Formula(x), expectedResult);
     }
 
+    @Test
+    public void formula14Test() {
+        double x = 2;
+        double expectedResult = 0.8895587656507004;
+        assertEquals(formulas.calculate14Formula(x), expectedResult);
+    }
+
+    @Test
+    public void formula15Test() {
+        double x = 2;
+        double expectedResult = 0.911505719268237;
+        assertEquals(formulas.calculate15Formula(x), expectedResult);
+    }
+
+    @Test
+    public void formula16Test() {
+        double x = 2;
+        double expectedResult = 4.2205705543620855;
+        assertEquals(formulas.calculate16Formula(x), expectedResult);
+    }
+
+    @Test
+    public void formula17Test() {
+        double x = 2;
+        double expectedResult = -13.158079577239803;
+        assertEquals(formulas.calculate17Formula(x), expectedResult);
+    }
+
+    @Test
+    public void formula18Test() {
+        double x = 2;
+        double expectedResult = 4.8766269527674835;
+        assertEquals(formulas.calculate18Formula(x), expectedResult);
+    }
+
+    @Test
+    public void formula19Test() {
+        double x = 2;
+        double expectedResult = 1.1768750447717151;
+        assertEquals(formulas.calculate19Formula(x), expectedResult);
+    }
+
+    @Test
+    public void formula20Test() {
+        double x = 2;
+        double expectedResult = 3.4469685727835495;
+        assertEquals(formulas.calculate20Formula(x), expectedResult);
+    }
+
+    @Test
+    public void formula21Test() {
+        double x = 1;
+        double expectedResult = 0.5003087739399442;
+        assertEquals(formulas.calculate21Formula(x), expectedResult);
+    }
+
+    @Test
+    public void formula22Test() {
+        double x = 2;
+        double expectedResult = -0.3273930165449391;
+        assertEquals(formulas.calculate22Formula(x), expectedResult);
+    }
+
+    @Test
+    public void formula23Test() {
+        double x = 2;
+        double expectedResult = 3.7753354194976856;
+        assertEquals(formulas.calculate23Formula(x), expectedResult);
+    }
+
+    @Test
+    public void formula24Test() {
+        double x = 2;
+        double expectedResult = 0.7665359822012203;
+        assertEquals(formulas.calculate24Formula(x), expectedResult);
+    }
+
+    @Test
+    public void formula25Test() {
+        double x = 2;
+        double expectedResult = 0.8042061664425223;
+        assertEquals(formulas.calculate25Formula(x), expectedResult);
+    }
+
+    @Test
+    public void formula26Test() {
+        double x = 2;
+        double expectedResult = 15.421610980889971;
+        assertEquals(formulas.calculate26Formula(x), expectedResult);
+
+    }
 }
+
+
