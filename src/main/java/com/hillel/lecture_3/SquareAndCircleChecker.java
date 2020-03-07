@@ -13,6 +13,15 @@ public class SquareAndCircleChecker {
 //        TODO implements result
         String result = "";
 
+        double storonaKvadrata=Math.sqrt(squareArea);
+        double radius = Math.sqrt(circleArea/Math.PI);
+
+        if (storonaKvadrata/2 >= radius){
+            result="The circle is in the square";
+        } else{
+            result="The circle is not in the square";
+        }
+
         return result;
     }
 
@@ -21,6 +30,17 @@ public class SquareAndCircleChecker {
 
 //        TODO implements result
         String result = "";
+
+        double storonaKvadrata=Math.sqrt(squareArea);
+
+        double diagonale = Math.sqrt(Math.pow(storonaKvadrata,2)+Math.pow(storonaKvadrata,2));
+
+        double diametr = 2*Math.sqrt(circleArea/Math.PI);
+        if (diametr >= diagonale){
+            result="The square is in the circle";
+        } else{
+            result="The square is not in the circle";
+        }
 
         return result;
     }
