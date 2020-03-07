@@ -16,11 +16,13 @@ public class SquareAndCircleChecker {
         double storonaKvadrata=Math.sqrt(squareArea);
         double radius = Math.sqrt(circleArea/Math.PI);
 
-        if (storonaKvadrata/2 >= radius){
-            result="The circle is in the square";
-        } else{
-            result="The circle is not in the square";
-        }
+        result = (storonaKvadrata/2 >= radius) ? "The circle is in the square" : "The circle is not in the square";
+
+//        if (storonaKvadrata/2 >= radius){
+//            result="The circle is in the square";
+//        } else{
+//            result="The circle is not in the square";
+//        }
 
         return result;
     }
