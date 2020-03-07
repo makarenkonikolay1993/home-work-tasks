@@ -12,6 +12,9 @@ public class DivisorChecker {
         //        TODO implements result
         String result = "";
 
+        /*
+        * Здесь удобнее без тернарных операторов, т.к. пишется большая строка.
+         */
         if (divisor%number==0){
             result="The number " + number + " is divisor of the number " + divisor;
         } else{

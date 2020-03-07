@@ -16,6 +16,7 @@ public class QuadraticEquationChecker {
         double rootOnlyOne = 0;
 
         double D = Math.pow(b,2)-4*a*c;
+
         if (a == 0){
             result="The 'a' coefficient should not be zero!";
         } else{

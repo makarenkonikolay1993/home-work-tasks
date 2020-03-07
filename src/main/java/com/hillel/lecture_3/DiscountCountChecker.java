@@ -13,9 +13,11 @@ public class DiscountCountChecker {
 //        TODO implements result
         double result = 0.0;
 
-        if(price > 1000){
-            result+=price*0.85;
-        }
+        result = (price > 1000) ? price*0.85 : 0;
+
+//        if(price > 1000){
+//            result+=price*0.85;
+//        }
 
         /*
         * Возможно здесь должен быть результат со скидкой и без скидки, а не ноль если меньше 1000.

@@ -36,11 +36,14 @@ public class SquareAndCircleChecker {
         double diagonale = Math.sqrt(Math.pow(storonaKvadrata,2)+Math.pow(storonaKvadrata,2));
 
         double diametr = 2*Math.sqrt(circleArea/Math.PI);
-        if (diametr >= diagonale){
-            result="The square is in the circle";
-        } else{
-            result="The square is not in the circle";
-        }
+
+        result = (diametr >= diagonale) ? "The square is in the circle" : "The square is not in the circle";
+
+//        if (diametr >= diagonale){
+//            result="The square is in the circle";
+//        } else{
+//            result="The square is not in the circle";
+//        }
 
         return result;
     }
