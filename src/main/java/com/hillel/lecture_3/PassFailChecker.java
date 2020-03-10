@@ -20,7 +20,7 @@ public class PassFailChecker {
 //        } else{
 //            result = "FAIL";
 //        }
-
+        System.out.println("DONE");
         return result;
     }
 }

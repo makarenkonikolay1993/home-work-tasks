@@ -20,7 +20,7 @@ public class OddEvenChecker {
 //        } else{
 //            result="Odd Number";
 //        }
-
+        System.out.println("BYE");
         return result;
     }
 }
