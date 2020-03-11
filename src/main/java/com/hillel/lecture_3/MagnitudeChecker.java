@@ -12,13 +12,18 @@ public class MagnitudeChecker {
 //        TODO implements result
         String result = "";
 
-        if(Math.abs(a)==Math.abs(b)){
+        double a1 = Math.abs(a);
+        double b1 = Math.abs(b);
+
+        if(a1==b1){
             result="The number " + a + " and " + b + " are equals by magnitude!";
-        } else if(Math.abs(a)>Math.abs(b)){
+        } else if(a1>b1){
             result="The number " + a + " has the greatest magnitude!";
-        } else if(Math.abs(a)<Math.abs(b)){
+        } else if(a1<b1){
             result="The number " + b + " has the greatest magnitude!";
         }
+
+
 
         return result;
     }

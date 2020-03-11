@@ -12,7 +12,7 @@ public class MaxMinAverageChecker {
 
 //        TODO implements result
         int result = 0;
-        //result=maximminim.maximum(c, maximminim.maximum(a,b)); //Использовал самописный метод вместо Math.max()
+
         if (a == b && a == c){
         } else if (a > b && a > c){
             result = a;
@@ -45,7 +45,6 @@ public class MaxMinAverageChecker {
 
 //        TODO implements result
         int result = 0;
-        //result=maximminim.minimum(c, maximminim.minimum(a,b)); //Использовал самописный метод вместо Math.min()
 
         if (a == b && a == c){
         } else if (a < b && a < c){
@@ -55,34 +54,6 @@ public class MaxMinAverageChecker {
         } else{
             result = c;
         }
-        return result;
-    }
-
-
-}
-
-class maximminim {
-    public static int maximum(int a, int b) {
-        int result = 0;
-        if (a == b) {
-        } else if (a > b) {
-            result = a;
-        } else {
-            result = b;
-        }
-
-        return result;
-    }
-
-    public static int minimum(int a, int b) {
-        int result = 0;
-        if (a == b) {
-        } else if (a < b) {
-            result = a;
-        } else {
-            result = b;
-        }
-
         return result;
     }
 }
