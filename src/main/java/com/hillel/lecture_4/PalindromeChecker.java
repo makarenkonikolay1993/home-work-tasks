@@ -21,8 +21,10 @@ public class PalindromeChecker {
 
         boolean isPalindrome=true;
 
-        for(int i = 0 ; i < arrayChar.length/2; i++){
-            if (arrayChar[i] != arrayChar[arrayChar.length-i-1]){
+        int size = arrayChar.length;
+
+        for(int i = 0 ; i < size/2; i++){
+            if (arrayChar[i] != arrayChar[size-i-1]){
                 isPalindrome=false;
                 break;
             }

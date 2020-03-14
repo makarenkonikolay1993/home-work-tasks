@@ -13,10 +13,12 @@ public class ReverseStringChecker {
 //        TODO implements result
         char[] reverse = value.toCharArray();
 
-        for(int i = 0 ; i < reverse.length/2; i++){
+        int size = reverse.length;
+
+        for(int i = 0 ; i < size/2; i++){
             char temp = reverse[i];
-            reverse[i] = reverse[reverse.length-i-1];
-            reverse[reverse.length-i-1]=temp;
+            reverse[i] = reverse[size-i-1];
+            reverse[size-i-1]=temp;
         }
 
 
