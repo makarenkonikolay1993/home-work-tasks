@@ -7,7 +7,7 @@ public class SinTableTestTask {
 
     public static void sin() {
         for (int i = 0; i <= 360; i += 10) {
-            System.out.printf("%.4f\n", (Math.sin(Math.toRadians(i))));
+            System.out.println("Синус угла " + i + " равен: " + (Math.sin(Math.toRadians(i))));
         }
     }
 
