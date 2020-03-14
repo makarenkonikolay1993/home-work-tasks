@@ -11,17 +11,17 @@ public class BinaryToDecimalChecker {
     public int fromDecimalToBinary(int value) {
 
 //        TODO implements result
-        int result = 0;
+        //int result = 0;
 
-        return result;
+        return Integer.parseInt(Integer.toBinaryString(value));
     }
 
     @Step
     public int fromBinaryToDecimal(int value) {
 
 //        TODO implements result
-        int result = 0;
+        //int result = 0;
 
-        return result;
+        return Integer.parseInt(Integer.toString(value),2);
     }
 }

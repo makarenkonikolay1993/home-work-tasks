@@ -11,9 +11,26 @@ public class PalindromeChecker {
     public boolean isPalindrome(String value) {
 
 //        TODO implements result
-        boolean result = false;
+        char[] arrayChar = value.toCharArray();
 
-        return result;
+
+//      char[] arrayCharTwo = new char[arrayChar.length];
+//        for (int i = 0; i < arrayChar.length; i++) {
+//            arrayCharTwo[i] = arrayChar[arrayChar.length - i - 1];
+//        }
+
+        boolean isPalindrome=true;
+
+        for(int i = 0 ; i < arrayChar.length/2; i++){
+            if (arrayChar[i] != arrayChar[arrayChar.length-i-1]){
+                isPalindrome=false;
+                break;
+            }
+        }
+
+        return isPalindrome;
+
+        //return Arrays.equals(arrayChar, arrayCharTwo);
     }
 
 }
