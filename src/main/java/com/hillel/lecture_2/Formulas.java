@@ -43,44 +43,52 @@ public class Formulas {
     }
 
     public double calculate14Formula(double x) {
-        double result =(Math.sqrt(3d*Math.sin(x)-Math.sin(3*x))+Math.cbrt(Math.exp(1.3*x)+Math.exp(-1.3*x)))*1d/Math.abs(x+5d/2d);
+        /**
+         * Разложение синуса третьей степени по ссылке:
+         * http://www.math24.ru/%D1%81%D1%82%D0%B5%D0%BF%D0%B5%D0%BD%D0%B8-%D1%82%D1%80%D0%B8%D0%B3%D0%BE%D0%BD%D0%BE%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B9.html
+         */
+        double result =(Math.sqrt(((Math.sin(x/2)-Math.sin((3d*x))/4)))+Math.cbrt(Math.exp(1.3*x)+Math.exp(-1.3*x)))*(1d/Math.abs(x+5d/2d));
 //        TODO implement formula 14
         return result;
     }
 
     public double calculate15Formula(double x) {
-        double result = (Math.abs(x*Math.log(x)-4)*Math.sqrt(x))*1d/Math.pow(Math.exp(4*x-1), 1d/5d);
+        double result = (Math.abs(x*Math.log(x)-4d)*Math.sqrt(x))*(1d/Math.pow(Math.exp(4*x-1), 1d/5d));
 //        TODO implement formula 15
         return result;
     }
 
     public double calculate16Formula(double x) {
-        double result = Math.cbrt(Math.exp(2*x)*Math.sqrt(x)-((x+1d/3d)/x))*Math.abs(Math.cos(2.5*x));
+        double result = Math.cbrt(Math.exp(2d*x)*Math.sqrt(x)-((x+1d/3d)/x))*Math.abs(Math.cos(2.5*x));
 //        TODO implement formula 16
         return result;
     }
 
     public double calculate17Formula(double x) {
-        double result = (Math.pow(x,3)/3)-(Math.exp(x)*Math.log(Math.abs(Math.pow(1.3,3)+Math.pow(x,3))))+4d/3d;
+        double result = (Math.pow(x,3)/3d)-(Math.exp(x)*Math.log(Math.abs(Math.pow(1.3,3)+Math.pow(x,3))))+4d/3d;
 //        TODO implement formula 17
         return result;
     }
 
     public double calculate18Formula(double x) {
-        double result = (Math.abs(7.2-10*x)/Math.cbrt(Math.pow(x,2)+Math.exp(x)))*Math.atan((4*(x/3))/Math.sqrt(Math.pow(1.1,3)+Math.pow(x,2)));
+        /**
+         * http://proglang.su/java/numbers-atan
+         * https://stackoverflow.com/questions/27538695/java-strange-nan-in-a-double-while-using-math-acos
+         */
+        double result = (Math.abs(7.2-10*x)/Math.cbrt(Math.pow(x,2)+Math.exp(x)))*Math.atan(Math.tan((4*(x/3))/Math.sqrt(Math.pow(1.1,3)+Math.pow(x,2))));
 //        TODO implement formula 18
         return result;
     }
 
     public double calculate19Formula(double x) {
-        double result = Math.acos(Math.tan(5*x/Math.PI)+(Math.pow(x,3.2)/28));
+        double result = Math.acos(Math.cos(Math.tan((5*x)/Math.PI)+(Math.pow(x,3.2)/28d)));
 //        TODO implement formula 19
         return result;
     }
 
     public double calculate20Formula(double x) {
-        /*
-        натуральный логарифм в квадрате - Math.E в квадрате  https://socratic.org/questions/is-lnx-2-equivalent-to-ln-2-x     https://www.quora.com/Can-we-write-ln-2-x-as-2-ln-x
+        /**
+         * натуральный логарифм в квадрате - Math.E в квадрате  https://socratic.org/questions/is-lnx-2-equivalent-to-ln-2-x     https://www.quora.com/Can-we-write-ln-2-x-as-2-ln-x
          */
 
         double result = (Math.cbrt(Math.pow(Math.exp(x), 2)) + Math.tan(Math.cos(Math.PI*x)))*Math.abs(Math.log(x/10.5+1d/3d));
@@ -90,43 +98,38 @@ public class Formulas {
 
     public double calculate21Formula(double x) {
 
-        /*
-        *Невозможно получить результат, отличный от NaN в данной интерпретации
+        /**
+         * http://proglang.su/java/numbers-acos
+         * https://stackoverflow.com/questions/27538695/java-strange-nan-in-a-double-while-using-math-acos
          */
         double a = (Math.pow(Math.log(x), 1d/4d)); //Здесь x должен быть всегда позитивным, иначе NaN
-        double b = Math.acos(x+3); // Здесь x+3 - всегда должен быть меньше единицы, иначе NaN
+        double b = Math.acos(Math.cos(x+3)); // Здесь x+3 - всегда должен быть меньше единицы, иначе NaN
         double c = (1d/Math.abs(x+2d*Math.pow(x,2d)));
         double result =(a+b)*c;
 //        TODO implement formula 21
         return result;
-
-        /*
-        1. Либо формулы ДЗ с наличием кос син танг котанг - решены неправильно из-за отстутствия преобразования
-        2. Либо учитывать здесь Expected Result как NaN
-         */
-
     }
 
     public double calculate22Formula(double x) {
-        double result = Math.asin(Math.log(x)/(Math.pow(x,2)+5*x+1))-(Math.pow(x,3.2)/28);
+        double result = Math.asin(Math.sin(Math.log(x)/(Math.pow(x,2)+5*x+1)))-(Math.pow(x,3.2)/28d);
 //        TODO implement formula 22
         return result;
     }
 
     public double calculate23Formula(double x) {
-        double result = Math.acos(Math.tan(5*x/Math.PI))+(Math.pow(x,5.7)/23);
+        double result = Math.acos(Math.cos(Math.tan(5*x/Math.PI)))+(Math.pow(x,5.7)/23d);
 //        TODO implement formula 23
         return result;
     }
 
     public double calculate24Formula(double x) {
-        double result = Math.atan(Math.abs(8.3-21*Math.pow(x,2)-0.8*x)/Math.cbrt(2.5+(1d/Math.pow(x,2))));
+        double result = Math.atan(Math.tan(Math.abs(8.3-21*Math.pow(x,2)-0.8*x)/Math.cbrt(2.5+(1d/Math.pow(x,2)))));
 //        TODO implement formula 24
         return result;
     }
 
     public double calculate25Formula(double x) {
-        double result = Math.pow(Math.log(Math.acos(Math.abs(Math.pow(x,3.4)+2.5*Math.pow(x,1.2)-0.7)/Math.cbrt(Math.exp(2.5*x)))),1d/4d)+1;
+        double result = Math.pow(Math.log(Math.acos(Math.cos((Math.abs(Math.pow(x,3.4)+2.5*Math.pow(x,1.2)-0.7)/Math.cbrt(Math.exp(2.5*x)))))),1d/4d)+1;
 //        TODO implement formula 25
         return result;
     }
