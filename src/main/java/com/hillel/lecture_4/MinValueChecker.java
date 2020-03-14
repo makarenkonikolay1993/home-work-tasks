@@ -13,7 +13,7 @@ public class MinValueChecker {
 //        TODO implements result
         int min = values[0];
 
-        for (int i = 0; i < values.length-1; i++){
+        for (int i = 0; i < values.length; i++){
             if (values[i]<min){
                 min=values[i];
             }
