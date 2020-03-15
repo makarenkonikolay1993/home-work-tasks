@@ -10,7 +10,13 @@ public class ReverseStringChecker {
     @Step
     public String getReversString(String value) {
 
+        return reverseString(value);
+
 //        TODO implements result
+
+    }
+
+    public static String reverseString(String value) {
         char[] reverse = value.toCharArray();
 
         int size = reverse.length;

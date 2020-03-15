@@ -11,15 +11,26 @@ public class PalindromeChecker {
     public boolean isPalindrome(String value) {
 
 //        TODO implements result
-        char[] arrayChar = value.toCharArray();
+        return palindromeOrNot(value);
 
 
-//      char[] arrayCharTwo = new char[arrayChar.length];
+
+
+    }
+
+    public static boolean palindromeOrNot(String value){
+        //      char[] arrayCharTwo = new char[arrayChar.length];
 //        for (int i = 0; i < arrayChar.length; i++) {
 //            arrayCharTwo[i] = arrayChar[arrayChar.length - i - 1];
 //        }
 
+
+
+        //return Arrays.equals(arrayChar, arrayCharTwo);
+
         boolean isPalindrome=true;
+
+        char[] arrayChar = value.toCharArray();
 
         int size = arrayChar.length;
 
@@ -31,8 +42,6 @@ public class PalindromeChecker {
         }
 
         return isPalindrome;
-
-        //return Arrays.equals(arrayChar, arrayCharTwo);
     }
 
 }

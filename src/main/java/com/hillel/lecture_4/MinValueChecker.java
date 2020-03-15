@@ -11,6 +11,11 @@ public class MinValueChecker {
     public int getValue(int[] values) {
 
 //        TODO implements result
+        int min = minOfArray(values);
+        return min;
+    }
+
+    public static int minOfArray(int[] values){
         int min = values[0];
 
         for (int i = 0; i < values.length; i++){
