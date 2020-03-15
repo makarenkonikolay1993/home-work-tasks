@@ -7,31 +7,34 @@ import io.qameta.allure.Step;
  */
 public class DistanceConverter {
 
+    public static final double inchesCoef = 39.37;
+    public static final double milesCoef = 1.609;
+
     @Step
     public double metersToInches(double meters) {
 //        TODO implements result
-        double result = meters*39.37;
+        double result = meters*inchesCoef;
         return result;
     }
 
     @Step
     public double inchesToMeters(double inches) {
 //        TODO implements result
-        double result = inches/39.37;
+        double result = inches/inchesCoef;
         return result;
     }
 
     @Step
     public double milesToKilometres(double miles) {
 //        TODO implements result
-        double result = miles*1.609;
+        double result = miles*milesCoef;
         return result;
     }
 
     @Step
     public double kilometresToMiles(double kilometres) {
 //        TODO implements result
-        double result = kilometres/1.609;
+        double result = kilometres/milesCoef;
         return result;
     }
 }
