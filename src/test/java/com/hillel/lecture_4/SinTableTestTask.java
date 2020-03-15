@@ -8,6 +8,7 @@ import java.text.DecimalFormat;
 public class SinTableTestTask {
     public static final String form = "|%-5s|%-8s|%-5s|%-8s|%-5s|%-8s|%-5s|%-8s|\n";
     public static final String formTwo = "|%-5s|%-8.5f|%-5s|%-8.5f|%-5s|%-8.5f|%-5s|%-8.5f|\n";
+    public static final String table = "+-----+--------+-----+--------+-----+--------+-----+--------+";
 
     /**
      * Вынес в отдельные константы в начале всего класса, т.к. слишком длинный код получался.
@@ -23,9 +24,9 @@ public class SinTableTestTask {
          * Хедер таблицы
          */
         System.out.println("Значение sin(x) от 0 до 360 градусов:");
-        System.out.println("+-----+--------+-----+--------+-----+--------+-----+--------+");
+        System.out.println(table);
         System.out.printf(form, angle, sinus, angle, sinus, angle, sinus, angle, sinus);
-        System.out.println("+-----+--------+-----+--------+-----+--------+-----+--------+");
+        System.out.println(table);
 
         /**
          * Начался цикл по печати всех значений.
@@ -47,7 +48,7 @@ public class SinTableTestTask {
         /**
          * Печать "футера" таблицы
          */
-        System.out.print("+-----+--------+-----+--------+-----+--------+-----+--------+");
+        System.out.print(table);
 
         }
 }
