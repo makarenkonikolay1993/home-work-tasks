@@ -12,7 +12,9 @@ public class BinaryToDecimalChecker {
 
 //        TODO implements result
 
-
+/**
+ * Вариант решения через StringBuilder - попроще. Инсертишь в первую ячейку и все ок.
+ */
         //StringBuilder binary = new StringBuilder();
 
 //        while (value>0){
