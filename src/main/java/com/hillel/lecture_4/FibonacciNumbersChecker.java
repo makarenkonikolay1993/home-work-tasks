@@ -11,15 +11,15 @@ public class FibonacciNumbersChecker {
     public int[] getFibonacciNumbers(int number) {
 
 //        TODO implements result
-        int[] fibo = new int[number];
-        fibo[0]=0;
-        fibo[1]=1;
+        int[] fibonacciArray = new int[number];
+        fibonacciArray[0]=0;
+        fibonacciArray[1]=1;
 
-        for(int i = 2; i < fibo.length; i++){
-            fibo[i]=fibo[i-1]+fibo[i-2];
+        for(int i = 2; i < fibonacciArray.length; i++){
+            fibonacciArray[i]=fibonacciArray[i-1]+fibonacciArray[i-2];
         }
 
-        return fibo;
+        return fibonacciArray;
     }
 
 }
