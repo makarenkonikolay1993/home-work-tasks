@@ -48,7 +48,7 @@ public class UpperLowerCaseChecker {
 
         for (int i = 0; i < size; i++){
             if (i == size-1){
-                result+=sentences[i]+"";
+                result += sentences[i] +"";
             } else {
                 result += sentences[i] + ". ";
             }
@@ -66,12 +66,12 @@ public class UpperLowerCaseChecker {
         int size = sentences.length;
 
         for (int i = 0; i < size; i++){
-            sentences[i]=sentences[i].substring(0,1).toUpperCase()+sentences[i].substring(1);
+            sentences[i] = sentences[i].substring(0,1).toUpperCase() + sentences[i].substring(1);
         }
 
         for (int i = 0; i < size; i++){
             if (i == size-1){
-                result+=sentences[i]+"";
+                result += sentences[i]+"";
             } else {
                 result += sentences[i] + " ";
             }

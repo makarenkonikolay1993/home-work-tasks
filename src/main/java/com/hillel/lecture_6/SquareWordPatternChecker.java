@@ -20,7 +20,7 @@ public class SquareWordPatternChecker {
         for (int i = 0 ; i < size-1; i++){
 
             char first = temp.charAt(0);
-            temp=temp.substring(1)+first;
+            temp = temp.substring(1)+first;
             result+=", " + temp;
         }
 

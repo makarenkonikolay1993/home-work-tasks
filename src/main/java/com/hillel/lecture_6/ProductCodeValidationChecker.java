@@ -17,25 +17,27 @@ public class ProductCodeValidationChecker {
         boolean isValid = false;
 
         String[] strings = code.split(" ");
+        String partOne = strings[0];
+        String partTwo = strings[1];
+        Pattern patternPartOne = Pattern.compile("[A-Z]{2}[\\d]{1}[A-Z]{3}[\\d]{2}[A-Z]{2}[\\d]{1}[A-Z]{2}[\\d]{1}[A-Z]{3}[\\d]{1}[A-Z]{2}$");
+        Pattern patternPartTwo = Pattern.compile("[\\d]+");
 
-        //AX 6 BYU 56 UX 6 CV 6 bNT 7 NM
-        if (Pattern.compile("[A-Z]{2}[0-9]{1}[A-Z]{3}[0-9]{2}[A-Z]{2}[0-9]{1}[A-Z]{2}[0-9]{1}[A-Z]{3}[0-9]{1}[A-Z]{2}$").matcher(strings[0]).find()
-                && Pattern.compile("[0-9]+").matcher(strings[1]).find()){
+        if ( patternPartOne.matcher(partOne).find() && patternPartTwo.matcher(partTwo).find() ){
 
-            String s = code.replaceAll("[a-zA-Z]", "");
+            String s = code.replaceAll("[A-Z]", "");
             strings = s.split(" ");
 
             int number = Integer.parseInt(strings[0]);
             int valid = Integer.parseInt(strings[1]);
             int result = 1;
 
-            while(number>0){
-                result*=number%100;
-                number/=100;
+            while(number > 0){
+                result *= number % 100;
+                number /= 100;
             }
 
-            if (result==valid){
-                isValid=true;
+            if (result == valid){
+                isValid = true;
             }
         }
         return isValid;
