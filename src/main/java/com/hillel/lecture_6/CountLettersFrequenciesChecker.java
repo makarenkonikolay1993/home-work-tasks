@@ -13,7 +13,13 @@ public class CountLettersFrequenciesChecker {
 
 //        TODO implements result
         String result = "";
-
+        int count=0;
+        for (int i = 0; i < text.length(); i++){
+            if (String.valueOf(text.charAt(i)).equals(String.valueOf(letter))){
+                count++;
+            }
+        }
+        result = "Character '" + letter + "' repeated " + count + " times";
         return result;
     }
 }

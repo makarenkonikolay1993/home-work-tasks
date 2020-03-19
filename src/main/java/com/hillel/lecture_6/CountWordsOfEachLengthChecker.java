@@ -8,10 +8,19 @@ import io.qameta.allure.Step;
 public class CountWordsOfEachLengthChecker {
 
     @Step
-    public int countNumberOfWorldWithLength(String sentence, int wordLength) {
+    public static int countNumberOfWorldWithLength(String sentence, int wordLength) {
 
 //        TODO implements result
         int result = 0;
+
+        String[] s = sentence.split(" ");
+
+        for (int i = 0 ; i < s.length; i++){
+            String temp = s[i];
+            if (temp.replace(",", "").replace(".","").length()==wordLength){
+                result++;
+            }
+        }
 
         return result;
     }
