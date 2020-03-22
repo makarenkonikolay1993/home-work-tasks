@@ -46,13 +46,15 @@ public class UpperLowerCaseChecker {
             }
         }
 
-        for (int i = 0; i < size; i++){
-            if (i == size-1){
-                result += sentences[i] +"";
-            } else {
-                result += sentences[i] + ". ";
-            }
-        }
+//        for (int i = 0; i < size; i++){
+//            if (i == size-1){
+//                result += sentences[i] +"";
+//            } else {
+//                result += sentences[i] + ". ";
+//            }
+//        }
+
+        result = String.join(". ", sentences);
         return result;
     }
 
@@ -69,13 +71,17 @@ public class UpperLowerCaseChecker {
             sentences[i] = sentences[i].substring(0,1).toUpperCase() + sentences[i].substring(1);
         }
 
-        for (int i = 0; i < size; i++){
-            if (i == size-1){
-                result += sentences[i]+"";
-            } else {
-                result += sentences[i] + " ";
-            }
-        }
+
+
+//        for (int i = 0; i < size; i++){
+//            if (i == size-1){
+//                result += sentences[i]+"";
+//            } else {
+//                result += sentences[i] + " ";
+//            }
+//        }
+
+        result = String.join(" ", sentences);
         return result;
     }
 }
