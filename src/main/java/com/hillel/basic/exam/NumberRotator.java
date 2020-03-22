@@ -20,7 +20,7 @@ public class NumberRotator {
     public static long rotate(long n) {
 
         long max = n;
-        String t = Long.toString(n);
+        String t = String.valueOf(n);
         String temp = "";
         String temp1 = "";
         for (int i = 0 ; i < 2; i++){

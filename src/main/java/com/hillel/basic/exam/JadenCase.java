@@ -19,11 +19,9 @@ public class JadenCase {
 
     public String toJadenCase(String phrase) {
 
-        String result = "";
+        String result = null;
 
-        if (phrase == null || phrase.isEmpty()){
-            return null;
-        } else {
+        if (phrase != null && !phrase.isEmpty()){
             String[] sentences = phrase.split(" ");
             int size = sentences.length;
 
@@ -31,7 +29,8 @@ public class JadenCase {
                 sentences[i] = sentences[i].substring(0, 1).toUpperCase() + sentences[i].substring(1);
             }
 
-            return String.join(" ", sentences);
+            result =  String.join(" ", sentences);
         }
+        return result;
     }
 }
