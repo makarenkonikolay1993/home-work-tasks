@@ -45,20 +45,23 @@ public class FractionNumbersChecker {
                 error = "Divide by zero";
             } else {
                 result = first/second;
+                error = null;
             }
 
         } else if (operation == '+'){
             result = first+second;
+            error = null;
 
         } else if (operation == '*'){
             if (first == 0 || second == 0){
                 error = "Multiply by zero";
             } else {
                 result = first*second;
+                error = null;
             }
         } else if (operation == '-'){
             result = first-second;
-
+            error = null;
         } else {
             error = "Error math operation";
         }
