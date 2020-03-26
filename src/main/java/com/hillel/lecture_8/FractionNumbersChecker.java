@@ -38,8 +38,6 @@ public class FractionNumbersChecker {
     }
 
     public void MathOperations(){
-
-
         if (this.operation == '/'){
             if (first == 0){
                 error = "Divide zero";
@@ -60,6 +58,7 @@ public class FractionNumbersChecker {
             }
         } else if (operation == '-'){
             result = first-second;
+
         } else {
             error = "Error math operation";
         }
