@@ -37,8 +37,8 @@ public class FractionNumbersChecker {
         System.out.println(result);
     }
 
-    public void MathOperations(){
-        if (this.operation == '/'){
+    public void mathOperations(){
+        if (operation == '/'){
             if (first == 0){
                 error = "Divide zero";
             } else if (second == 0){
