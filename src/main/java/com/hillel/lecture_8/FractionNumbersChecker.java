@@ -63,10 +63,8 @@ public class FractionNumbersChecker {
             result = first-second;
             error = null;
         } else {
-            error = "Error math operation";
+            error = "Error math operator";
         }
-
-
     }
 
     public String toString(){
