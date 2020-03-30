@@ -22,7 +22,7 @@ public class PhoneTest {
         LandlinePhone homePhone = new LandlinePhone("First Provider", "Landline phone", "No OS", "+380562323232");
         LandlinePhone expectedResult = new LandlinePhone("First Provider", "Landline phone", "No OS", "+380562323232");
 
-        assertEquals(homePhone.hashCode(), expectedResult.hashCode());
+        assertEquals(homePhone, expectedResult);
 
     }
 

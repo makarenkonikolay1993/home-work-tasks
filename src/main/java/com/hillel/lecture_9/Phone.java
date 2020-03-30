@@ -2,7 +2,7 @@ package com.hillel.lecture_9;
 
 import java.util.Objects;
 
-public abstract class Phone {
+public class Phone {
     private String provider;
     private String type;
     private String os;
@@ -47,7 +47,9 @@ public abstract class Phone {
         this.phoneNumber = phoneNumber;
     }
 
-    public abstract String getInfo();
+    public String getInfo(){
+        return  this.provider + " " + this.type + " " + " " + this.phoneNumber + " " + this.os;
+    }
 
     public String call(Phone phoneTwo){
         return String.format("Call from %s to %s is in progress", this.toString(), phoneTwo.toString());
