@@ -50,6 +50,16 @@ public class FractionNumbersChecker {
         }
 
         return temp;
+
+        /*
+        int gcd = 1;
+        for (int i = 1 ; i <= nominator && i <= denominator; i++){
+            if (num1%i==0 && num2%i==0){
+                gcd=i;
+            }
+        }
+        return gcd;
+         */
     }
 
     // приведение дробей к наименьшему общему кратному
