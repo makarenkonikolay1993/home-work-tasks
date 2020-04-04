@@ -10,7 +10,7 @@ public class CalcTest {
     private TrigonometricCalc trigonometricCalc = new TrigonometricCalc();
 
     @Test
-    public void EngPower(){
+    public void engPower(){
 
         double expectedResult = 4.0;
 
