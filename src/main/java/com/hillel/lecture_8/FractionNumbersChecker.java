@@ -38,7 +38,7 @@ public class FractionNumbersChecker {
         this.denominator = denominator;
     }
 
-    public int calculateCGD(int nominator, int denominator){
+    private int calculateCGD(int nominator, int denominator){
         // Евклидов алгоритм
         int tempNominator=nominator;
         int temp = 0;
@@ -63,7 +63,7 @@ public class FractionNumbersChecker {
     }
 
     // приведение дробей к наименьшему общему кратному
-    public void reduce(){
+    private void reduce(){
         int gcd = calculateCGD(nominator, denominator);
         nominator /= gcd;
         denominator /= gcd;
