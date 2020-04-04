@@ -52,5 +52,15 @@ public class CalcTest {
         assertEquals(trigonometricCalc.divide(5,2), engineerCalc.divide(5,2));
     }
 
+    @Test
+    public void factorial(){
+        assertEquals(engineerCalc.factorial(5), 120.0);
+    }
+
+    @Test
+    public void percent(){
+        assertEquals(engineerCalc.percent(100,10), 10.0);
+    }
+
 
 }
