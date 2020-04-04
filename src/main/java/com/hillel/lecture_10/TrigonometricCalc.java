@@ -8,6 +8,22 @@ public class TrigonometricCalc extends Calc {
      * Этот калькулятор работает для тригонометрических функций
      */
 
+    public double plus(double firstNumber, double secondNumber){
+        return firstNumber+secondNumber;
+    }
+
+    public double minus(double firstNumber, double secondNumber){
+        return firstNumber+secondNumber;
+    }
+
+    public double multiply(double firstNumber, double secondNumber){
+        return firstNumber+secondNumber;
+    }
+
+    public double divide(double firstNumber, double secondNumber){
+        return firstNumber+secondNumber;
+    }
+
     public double cosinusInRadians(double Radians){
         return Math.cos(Radians);
     }

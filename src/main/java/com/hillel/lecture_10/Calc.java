@@ -7,19 +7,11 @@ public abstract class Calc {
      * Создать экземпляр класса мы не можем, но можем произвести Upcasting до обычного калькулятора
      */
 
-    public double plus(double firstNumber, double secondNumber){
-        return firstNumber+secondNumber;
-    }
+    public abstract double plus(double firstNumber, double secondNumber);
 
-    public double minus(double firstNumber, double secondNumber){
-        return firstNumber+secondNumber;
-    }
+    public abstract double minus(double firstNumber, double secondNumber);
 
-    public double multiply(double firstNumber, double secondNumber){
-        return firstNumber+secondNumber;
-    }
+    public abstract double multiply(double firstNumber, double secondNumber);
 
-    public double divide(double firstNumber, double secondNumber){
-        return firstNumber+secondNumber;
-    }
+    public abstract double divide(double firstNumber, double secondNumber);
 }

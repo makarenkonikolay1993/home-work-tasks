@@ -6,6 +6,22 @@ public class EngineerCalc extends TrigonometricCalc {
      * Этот калькулятор наследует все калькуляторы до этого и расширяет их функционал
      */
 
+    public double plus(double firstNumber, double secondNumber){
+        return firstNumber+secondNumber;
+    }
+
+    public double minus(double firstNumber, double secondNumber){
+        return firstNumber+secondNumber;
+    }
+
+    public double multiply(double firstNumber, double secondNumber){
+        return firstNumber+secondNumber;
+    }
+
+    public double divide(double firstNumber, double secondNumber){
+        return firstNumber+secondNumber;
+    }
+
     public double exponent(double number){
         return Math.exp(number);
     }

@@ -10,31 +10,6 @@ public class CalcTest {
     private TrigonometricCalc trigonometricCalc = new TrigonometricCalc();
 
     @Test
-    public void EngCalcExtends(){
-        boolean result=false;
-
-
-        if (engineerCalc instanceof Calc){
-            result=true;
-        }
-
-        assertEquals(result, true);
-    }
-
-
-    @Test
-    public void TrigCalcExtends(){
-        boolean result = false;
-
-
-        if (trigonometricCalc instanceof Calc){
-            result=true;
-        }
-
-        assertEquals(result, true);
-    }
-
-    @Test
     public void EngPower(){
 
         double expectedResult = 4.0;
@@ -55,6 +30,26 @@ public class CalcTest {
     @Test
     public void cotangens(){
         assertEquals(trigonometricCalc.cotangensInRadians(10),1.54235104535692);
+    }
+
+    @Test
+    public void plus(){
+        assertEquals(trigonometricCalc.plus(5,2), engineerCalc.plus(5,2));
+    }
+
+    @Test
+    public void minus(){
+        assertEquals(trigonometricCalc.minus(5,2), engineerCalc.minus(5,2));
+    }
+
+    @Test
+    public void multiply(){
+        assertEquals(trigonometricCalc.multiply(5,2), engineerCalc.multiply(5,2));
+    }
+
+    @Test
+    public void divide(){
+        assertEquals(trigonometricCalc.divide(5,2), engineerCalc.divide(5,2));
     }
 
 
