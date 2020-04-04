@@ -47,7 +47,7 @@ public class EngineerCalc extends TrigonometricCalc {
         return result;
     }
 
-    public static double factorial (double number){
+    public double factorial (double number){
         double result = 1;
         for (int i = 1; i <=number; i++){
             result=result*i;
