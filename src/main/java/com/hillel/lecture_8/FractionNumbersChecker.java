@@ -8,9 +8,9 @@ public class FractionNumbersChecker {
     private  int nominator;
     private  int denominator;
 
-    public FractionNumbersChecker(){
-
-    }
+//    public FractionNumbersChecker(){
+//
+//    }
 
     public FractionNumbersChecker(int nominator, int denominator){
         this.nominator = nominator;
@@ -75,8 +75,9 @@ public class FractionNumbersChecker {
     public String toString(){
         if (this.denominator < 0){
             return "-"+this.nominator + "/" + Math.abs(this.denominator);
+        } else {
+            return this.nominator + "/" + this.denominator;
         }
-        return this.nominator + "/" + this.denominator;
     }
 
     public FractionNumbersChecker plus(FractionNumbersChecker fTwo){
@@ -87,8 +88,11 @@ public class FractionNumbersChecker {
 
         int numer = (firstNum*secondDen)+(secondNum*firstDen);
         int denom = firstDen*secondDen;
+
         FractionNumbersChecker f3 = new FractionNumbersChecker(numer,denom);
+
         System.out.println(String.format("Result of Plus %s/%s and %s/%s is: %s", firstNum, firstDen, secondNum, secondDen, f3.toString()));
+
         return f3;
     }
 
@@ -100,8 +104,11 @@ public class FractionNumbersChecker {
 
         int numer = (firstNum*secondDen)-(secondNum*firstDen);
         int denom = firstDen*secondDen;
+
         FractionNumbersChecker f3 = new FractionNumbersChecker(numer,denom);
+
         System.out.println(String.format("Result of Minus %s and %s is: %s", this.toString(), fTwo.toString(), f3.toString()));
+
         return f3;
     }
 
@@ -115,8 +122,11 @@ public class FractionNumbersChecker {
 
         int numer = firstNum*secondNum;
         int denom = firstDen*secondDen;
+
         FractionNumbersChecker f3 = new FractionNumbersChecker(numer,denom);
+
         System.out.println(String.format("Result of Multiply %s and %s is: %s", this.toString(), fTwo.toString(), f3.toString()));
+
         return f3;
     }
 
@@ -129,8 +139,11 @@ public class FractionNumbersChecker {
 
         int numer =firstNum*secondDen;
         int denom = firstDen*secondNum;
+
         FractionNumbersChecker f3 = new FractionNumbersChecker(numer,denom);
+
         System.out.println(String.format("Result of Divide %s and %s is: %s", this.toString(), fTwo.toString(), f3.toString()));
+
         return f3;
     }
 
