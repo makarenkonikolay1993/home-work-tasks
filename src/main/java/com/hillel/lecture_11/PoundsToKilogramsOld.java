@@ -1,8 +1,8 @@
 package com.hillel.lecture_11;
 
-public class MetersToInches implements Converter {
+public class PoundsToKilogramsOld implements Converter{
     @Override
     public double convert(double value) {
-        return value*39.37;
+        return value/2.2046;
     }
 }

@@ -1,8 +1,8 @@
 package com.hillel.lecture_11;
 
-public class KilogramsToPounds implements Converter{
+public class InchesToMetersOld implements Converter {
     @Override
     public double convert(double value) {
-        return value*2.20462;
+        return value/39.37;
     }
 }

@@ -4,17 +4,17 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 public class ConvertersTest {
-    Converter celsiusToFahrenheit = new CelsiusToFahrenheit();
-    Converter celsiusToKelvin = new CelsiusToKelvin();
-    Converter fahrenheitToCelsius = new FahrenheitToCelsius();
-    Converter inchesToMeters = new InchesToMeters();
-    Converter kilogramsToPounds = new KilogramsToPounds();
-    Converter metersToInches = new MetersToInches();
-    Converter milesToKilometres = new MilesToKilometres();
-    Converter kilometresToMiles = new KilometresToMiles();
-    Converter poundsToKilograms = new PoundsToKilograms();
-    Converter speedKmToMi = new SpeedKmToMi();
-    Converter speedMiToKm = new SpeedMiToKm();
+    Converter celsiusToFahrenheit = new CelsiusToFahrenheitOld();
+    Converter celsiusToKelvin = new CelsiusToKelvinOld();
+    Converter fahrenheitToCelsius = new FahrenheitToCelsiusOld();
+    Converter inchesToMeters = new InchesToMetersOld();
+    Converter kilogramsToPounds = new KilogramsToPoundsOld();
+    Converter metersToInches = new MetersToInchesOld();
+    Converter milesToKilometres = new MilesToKilometresOld();
+    Converter kilometresToMiles = new KilometresToMilesOld();
+    Converter poundsToKilograms = new PoundsToKilogramsOld();
+    Converter speedKmToMi = new SpeedKmToMiOld();
+    Converter speedMiToKm = new SpeedMiToKmOld();
 
     @Test
     public void CelsiusToFahrenheitTest(){

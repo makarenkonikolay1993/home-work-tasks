@@ -1,6 +1,6 @@
-package com.hillel.lecture_11;
+package com.hillel.lecture_12;
 
-public class InchesToMeters implements Converter {
+public class InchesToMeters implements IConverter {
     @Override
     public double convert(double value) {
         return value/39.37;
