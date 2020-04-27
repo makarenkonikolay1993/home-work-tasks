@@ -33,7 +33,7 @@ public class User {
                 '}';
     }
 
-    public String phonesToString(List<String> list) {
+    private String phonesToString(List<String> list) {
         StringJoiner g = new StringJoiner("\",\"", "[\"", "\"]");
         for (int i = 0 ; i < list.size(); i++) {
             g.add(list.get(i));
@@ -41,7 +41,7 @@ public class User {
         return String.valueOf(g);
     }
 
-    public String friendsToString(List<Friend> list) {
+    private String friendsToString(List<Friend> list) {
         StringJoiner g = new StringJoiner("},{", "[{", "}]");
         for (int i = 0 ; i < list.size(); i++) {
             g.add("\"id\":"+list.get(i).getId() + ",\"firstName\":"+"\""+list.get(i).getFirstName()+"\",\"lastName\":"+"\""+list.get(i).getLastName()+"\"");
