@@ -25,9 +25,8 @@ public class ArraysChecker {
     public List<String> changeIndex(List<String> list) {
 
         String temp = list.get(1);
-        String temp1 = list.get(3);
+        list.set(1, list.get(3));
         list.set(3, temp);
-        list.set(1, temp1);
 
         return list;
     }
