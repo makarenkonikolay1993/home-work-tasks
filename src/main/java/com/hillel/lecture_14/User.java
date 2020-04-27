@@ -35,16 +35,16 @@ public class User {
 
     private String phonesToString(List<String> list) {
         StringJoiner jsonString = new StringJoiner("\",\"", "[\"", "\"]");
-        for (int i = 0 ; i < list.size(); i++) {
-            jsonString.add(list.get(i));
+        for (String stringElement : list) {
+            jsonString.add(stringElement);
         }
         return String.valueOf(jsonString);
     }
 
     private String friendsToString(List<Friend> list) {
         StringJoiner jsonString = new StringJoiner("},{", "[{", "}]");
-        for (int i = 0 ; i < list.size(); i++) {
-            jsonString.add("\"id\":"+list.get(i).getId() + ",\"firstName\":"+"\""+list.get(i).getFirstName()+"\",\"lastName\":"+"\""+list.get(i).getLastName()+"\"");
+        for (Friend friend : list) {
+            jsonString.add("\"id\":" + friend.getId() + ",\"firstName\":" + "\"" + friend.getFirstName() + "\",\"lastName\":" + "\"" + friend.getLastName() + "\"");
         }
         return String.valueOf(jsonString);
     }
