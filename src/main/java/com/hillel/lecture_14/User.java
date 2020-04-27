@@ -34,19 +34,19 @@ public class User {
     }
 
     private String phonesToString(List<String> list) {
-        StringJoiner g = new StringJoiner("\",\"", "[\"", "\"]");
+        StringJoiner jsonString = new StringJoiner("\",\"", "[\"", "\"]");
         for (int i = 0 ; i < list.size(); i++) {
-            g.add(list.get(i));
+            jsonString.add(list.get(i));
         }
-        return String.valueOf(g);
+        return String.valueOf(jsonString);
     }
 
     private String friendsToString(List<Friend> list) {
-        StringJoiner g = new StringJoiner("},{", "[{", "}]");
+        StringJoiner jsonString = new StringJoiner("},{", "[{", "}]");
         for (int i = 0 ; i < list.size(); i++) {
-            g.add("\"id\":"+list.get(i).getId() + ",\"firstName\":"+"\""+list.get(i).getFirstName()+"\",\"lastName\":"+"\""+list.get(i).getLastName()+"\"");
+            jsonString.add("\"id\":"+list.get(i).getId() + ",\"firstName\":"+"\""+list.get(i).getFirstName()+"\",\"lastName\":"+"\""+list.get(i).getLastName()+"\"");
         }
-        return String.valueOf(g);
+        return String.valueOf(jsonString);
     }
 
     private List<Friend> friends = null;
