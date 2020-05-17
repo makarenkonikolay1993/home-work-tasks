@@ -240,7 +240,7 @@ public class RegistrationFormValidationTests extends MainClassForTests {
         assertThat(text).isEqualTo("password can't be blank");
     }
 
-    @Test ( priority = 4 )
+    @Test
     public void shortPasswordTest() {
         baseForRegistration();
 
