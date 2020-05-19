@@ -114,8 +114,6 @@ public class PostFormTest extends MainClassForTests {
 
         clickEditArticleButton();
 
-        clearAllFieldsOfPost();
-
         inputText(articleTitleField(), defaultPost.getArticleTitle());
         inputText(articleAboutField(), defaultPost.getArticleAbout());
         inputText(articleField(), defaultPost.getArticle());

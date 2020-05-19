@@ -1,7 +1,6 @@
 package io.realworld.app.seventeen;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -116,10 +115,6 @@ public class LoginFormValidationTests extends MainClassForTests {
         assertThat(driver.findElement(By.xpath("//form//button[text()='Update Settings']")).getText()).isEqualTo("Update Settings");
     }
 
-    private void scrollToFooter() {
-        JavascriptExecutor jse = (JavascriptExecutor) driver;
-        jse.executeScript("scroll(0, 500);");
-    }
 
     private void clickLogOutButton() {
         driver.findElement(By.cssSelector(".row div > button")).click();

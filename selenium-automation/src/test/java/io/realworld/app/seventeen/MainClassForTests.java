@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import io.realworld.app.model.User;
 import io.realworld.app.utils.UserData;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -91,5 +92,10 @@ public class MainClassForTests {
 
     protected void homePageCheck() {
         assertThat(driver.findElement(By.xpath("//div//a[text()='Your Feed']")).getText()).isEqualTo("Your Feed");
+    }
+
+    protected void scrollToFooter() {
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("scroll(0, 500);");
     }
 }
