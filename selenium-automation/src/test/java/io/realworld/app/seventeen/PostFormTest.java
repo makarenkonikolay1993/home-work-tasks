@@ -114,10 +114,7 @@ public class PostFormTest extends MainClassForTests {
 
         clickEditArticleButton();
 
-        articleTitleField().clear();
-        articleAboutField().clear();
-        articleField().clear();
-        tagsField().clear();
+        clearAllFieldsOfPost();
 
         inputText(articleTitleField(), defaultPost.getArticleTitle());
         inputText(articleAboutField(), defaultPost.getArticleAbout());
@@ -229,5 +226,12 @@ public class PostFormTest extends MainClassForTests {
 
     private void goToMyArticlesPage() {
         driver.findElement(By.xpath("//a[@href='#@"+defaultUser.getUsername()+"']")).click();
+    }
+
+    private void clearAllFieldsOfPost() {
+        articleTitleField().clear();
+        articleAboutField().clear();
+        articleField().clear();
+        tagsField().clear();
     }
 }
